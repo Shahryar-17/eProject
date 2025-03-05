@@ -1,0 +1,72 @@
+.sub-cat{
+    justify-content: space-around;
+}
+.cards {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 0 0px 35px rgba(0, 0, 0, 0.15);
+}
+
+.cards .poster::before {
+    content: '';
+    position: absolute;
+    bottom: -180px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, hsl(0, 10%, 33%) 50%, transparent);
+    transition: 0.5s;
+    z-index:1;
+}
+
+.cards:hover .poster::before {
+    bottom: 0px;
+}
+
+.cards .poster img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.card:hover .poster img {
+    transform: translateY(-50px);
+    filter: blur(.5px);
+}
+
+.cards .details {
+    position: absolute;
+    bottom: -160px;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.cards:hover .details {
+    bottom: -20px;
+}
+.cards .details h3{
+    font-weight: bold;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 12px 20px;
+    color: #fffffb;
+    background-color: #070707cb;
+    border-radius: 10px;
+    width: max-content;
+}
+.cards .details .info{
+    width: 80%;
+    color: #fff;
+}
+.cards .details h5{
+    color: yellow;
+}
+.cards .details .btn {
+    border-top-left-radius: 100px;
+    color: yellow;
+}
